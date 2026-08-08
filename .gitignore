@@ -1,5 +1,7 @@
 .directory
 
+*.bin
+
 /lure
 /lure-api-server
 /cmd/lure-api-server/lure-api-server
