@@ -26,10 +26,6 @@ LURE was created because packaging software for multiple Linux distros can be di
 
 The documentation for LURE is in the [docs](docs) directory in this repo.
 
-## Web Interface
-
-LURE has an open source web interface, licensed under the AGPLv3 (https://gitea.elara.ws/lure/lure-web), and it's available at https://lure.sh/.
-
 ## Repositories
 
 LURE's repos are git repositories that contain a directory for each package, with a `lure.sh` file inside. The `lure.sh` file tells LURE how to build the package and information about it. `lure.sh` scripts are similar to the AUR's PKGBUILD scripts.
