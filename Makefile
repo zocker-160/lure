@@ -1,8 +1,13 @@
 PREFIX ?= /usr/local
+
 GIT_VERSION = $(shell git describe --tags )
+VERSION = "1.0-zocker"
 
 lure:
-	CGO_ENABLED=0 go build -ldflags="-X 'go.elara.ws/lure/internal/config.Version=$(GIT_VERSION)'"
+	CGO_ENABLED=0 go build -ldflags="-s -w -X 'lure.sh/lure/internal/config.Version=$(VERSION)'"
+
+lureARM:
+	CGO_ENABLED=0 GOARCH=arm64 go build -ldflags="-s -w -X 'lure.sh/lure/internal/config.Version=$(VERSION)'"
 
 clean:
 	rm -f lure
